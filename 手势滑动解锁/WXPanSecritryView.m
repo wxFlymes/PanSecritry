@@ -175,10 +175,9 @@
         //当滑动手势结束的时候，获取到手势的结果，然后根据手势的结果执行响应的操作
         if (self.wxDelegate && [self.wxDelegate respondsToSelector:@selector(secritryView:didEndPanWithResult:)]) {
             [self.wxDelegate secritryView:self didEndPanWithResult:self.statusArr];
-
-            //执行回调之后，将数据状态初始化
-            [self resetInitStatus];
         }
+        //执行回调之后，将数据状态初始化
+        [self resetInitStatus];
     }
 
 }
